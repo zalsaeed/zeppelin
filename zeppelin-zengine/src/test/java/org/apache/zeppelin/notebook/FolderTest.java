@@ -211,4 +211,18 @@ public class FolderTest {
     folder = new Folder(Folder.TRASH_FOLDER_ID + "/a/b");
     assertTrue(folder.isTrash());
   }
+
+  @Test
+  public void notifyRenameTest(){
+    FolderView folderViewListener = new FolderView();
+    folderViewListener.putNote(note1);
+
+    // add listener and change the folder's name
+    folder.addFolderListener(folderViewListener);
+    folder.rename("folderWithNewName");
+
+    // assert the listener is aware of the change
+    assertEquals(folderViewListener.getFolder(folder.getId()).getName(), "folderWithNewName");
+
+  }
 }

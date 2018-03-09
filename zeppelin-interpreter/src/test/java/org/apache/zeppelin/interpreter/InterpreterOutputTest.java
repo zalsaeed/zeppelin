@@ -192,6 +192,31 @@ public class InterpreterOutputTest implements InterpreterOutputListener {
     InterpreterOutput.limit = Constants.ZEPPELIN_INTERPRETER_OUTPUT_LIMIT;
   }
 
+  @Test
+  public void testGetInterpreterResultMessages() {
+
+  }
+
+  @Test
+  public void testClear() {
+
+  }
+
+  @Test
+  public void testToInterpreterResultMessage() {
+
+  }
+
+  @Test
+  public void testToByteArray() {
+
+  }
+
+  @Test
+  public void testClose() {
+
+  }
+
 
   @Override
   public void onUpdateAll(InterpreterOutput out) {
