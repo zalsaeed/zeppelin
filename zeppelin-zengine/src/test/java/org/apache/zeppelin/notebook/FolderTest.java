@@ -219,10 +219,11 @@ public class FolderTest {
 
     // add listener and change the folder's name
     folder.addFolderListener(folderViewListener);
-    folder.rename("folderWithNewName");
+    for (int i = 0 ; i < 5 ; i++)
+      folder.rename("folderWithNewName" + (i+1));
 
     // assert the listener is aware of the change
-    assertEquals(folderViewListener.getFolder(folder.getId()).getName(), "folderWithNewName");
+    assertEquals(folderViewListener.getFolder(folder.getId()).getName(), "folderWithNewName5");
 
   }
 }
